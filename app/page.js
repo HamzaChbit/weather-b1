@@ -3,8 +3,8 @@ import Spinner from "@/competent/Spinner"
 import Weather from "@/competent/Weather"
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
-import {BsSearch} from 'react-icons/bs'
 
+import { BsSearch } from 'react-icons/bs';
 
 export default   function Home() {
 
@@ -57,13 +57,15 @@ if(loading) {
         <div>
           <input onChange={(e)=>setCity(e.target.value) } className="bg-transparent border-none text-white focus:outline-none text-2xl" type="text" placeholder="Search city" />
         </div>
-        <button onClick={fetchWeather}><BsSearch   size={20}/></button>
+        <button onClick={fetchWeather}><BsSearch size={20}/></button>
       </form>
+      
     </div>
     {weather.main && <Weather data={weather} />}
-    
    
-    </div>)
+
+    </div>
+    )
 
 
 
